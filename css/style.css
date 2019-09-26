@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%;
+  font-size: 100% !important;
 }
 
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -10,6 +10,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
+  line-height: 1.2;
 }
 
 ul {
@@ -47,11 +48,6 @@ table {
 td, th {
   padding: 0;
   text-align: left;
-}
-
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  font-dislay: block;
 }
 
 .header {
@@ -141,7 +137,7 @@ body {
 
 .banner {
   width: 100%;
-  height: calc(100vh - 100px*2);
+  height: calc(100vh - 100px* 2);
   background-image: url("../img/banner.jpg");
   background-size: cover;
   background-position: center;

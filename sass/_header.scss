@@ -1,0 +1,48 @@
+.header {
+    width: 100%;
+    height: $header__height;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    padding: $margin--medium $side-margin;
+    display: flex;
+    z-index: 1000;
+    &__logo {
+        height: $header__logo__height;
+    }
+    &__nav {
+        margin-left: auto;
+        display: flex;
+        &__a {
+            font-size: $header__nav__a__font-size;
+            padding: $margin--medium;
+            color: black;
+            transition: color 200ms;
+            position: relative;
+            text-decoration: none;
+            &:after {
+                height: 0px;
+                transition: height 200ms;
+                display: block;
+                content: "";
+                background-color: $green;
+                width: 100%;
+                position: absolute;
+                bottom: -$margin--medium;
+                left: 0;
+            }
+            &--active {
+                @extend .header__nav__a;
+            }
+            &--active,
+            &:hover {
+                transition: color 200ms;
+                color: $green;
+                &:after {
+                    transition: height 200ms;
+                    height: 2.5px;
+                }
+            }
+        }
+    }
+}
