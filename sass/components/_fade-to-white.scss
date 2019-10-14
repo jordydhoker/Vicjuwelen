@@ -1,0 +1,23 @@
+%fade {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10vw;
+    z-index: -1;
+    max-height: size(13);
+}
+
+.fade {
+    @extend %fade;
+    background-image: linear-gradient(transparent, white);
+    bottom: -1px;
+    &--top{
+        @extend %fade;
+        background-image: linear-gradient(white, transparent);
+        top: -1px;
+    }
+    &--small{
+        height: 5vw;
+        max-height: size(9);
+    }
+}

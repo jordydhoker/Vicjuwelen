@@ -1,0 +1,52 @@
+.header {
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    padding: 0 var(--side-margin);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    &__logo {
+        height: size(8);
+    }
+    &__nav {
+        margin-left: auto;
+        display: flex;
+        height: 100%;
+        &__a {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            height: size(9);
+            padding: 0 size(4);
+            color: black;
+            transition: color 200ms;
+            position: relative;
+            text-decoration: none;
+            &:after {
+                height: 0px;
+                transition: height 200ms;
+                display: block;
+                content: "";
+                background-color: $green-500;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            &--active {
+                @extend .header__nav__a;
+            }
+            &--active,
+            &:hover {
+                transition: color 200ms;
+                color: $green-500;
+                &:after {
+                    transition: height 200ms;
+                    height: 2px;
+                }
+            }
+        }
+    }
+}

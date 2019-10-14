@@ -1,0 +1,23 @@
+$montserrat: "Montserrat", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+
+$sizes: 0.25 0.5 0.75 1 1.5 2 2.5 3 4 5 6 8 10 12 14 16 20 24 30 36 42 48 56 64 72 80 88 96 104;
+
+@function size($size) {
+    @return #{16 * nth($sizes, $size)}px;
+}
+
+@function size-rem($size) {
+    @return #{nth($sizes, $size)}rem;
+}
+
+$animation-time: 200ms;
+
+html {
+    --side-margin: 7.5%;
+}
+@media only screen and (max-width: 1000px){
+    html {
+        --side-margin: 2.5%;
+    }
+}

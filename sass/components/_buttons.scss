@@ -1,0 +1,28 @@
+%button {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+    padding: size(4) size(5);
+    align-self: flex-end;
+    font-family: $open-sans;
+    cursor: pointer;
+    transition: box-shadow $animation-time, background-color $animation-time;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+
+    &:hover {
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.button {
+    &--white {
+        @extend %button;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        &:hover {
+            background-color: $gray-100;
+        }
+    }
+}
