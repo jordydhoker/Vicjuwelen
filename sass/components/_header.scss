@@ -1,21 +1,25 @@
 .header {
     width: 100%;
-    height: $header__height;
     background-color: white;
     position: sticky;
     top: 0;
-    padding: $margin--medium $side-margin;
+    padding: 0 var(--side-margin);
     display: flex;
+    align-items: center;
     z-index: 1000;
     &__logo {
-        height: $header__logo__height;
+        height: size(8);
     }
     &__nav {
         margin-left: auto;
         display: flex;
+        height: 100%;
         &__a {
-            font-size: $header__nav__a__font-size;
-            padding: $margin--medium;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            height: size(9);
+            padding: 0 size(4);
             color: black;
             transition: color 200ms;
             position: relative;
@@ -25,10 +29,10 @@
                 transition: height 200ms;
                 display: block;
                 content: "";
-                background-color: $green;
+                background-color: $green-500;
                 width: 100%;
                 position: absolute;
-                bottom: -$margin--medium;
+                bottom: 0;
                 left: 0;
             }
             &--active {
@@ -37,10 +41,10 @@
             &--active,
             &:hover {
                 transition: color 200ms;
-                color: $green;
+                color: $green-500;
                 &:after {
                     transition: height 200ms;
-                    height: 2.5px;
+                    height: 2px;
                 }
             }
         }
