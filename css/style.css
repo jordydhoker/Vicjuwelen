@@ -110,7 +110,7 @@ html {
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin-bottom: 24px;
-    width: 672px;
+    width: 576px;
   }
   .home__consulente .home__text__title, .home__gastvrouw .home__text__title {
     font-size: 1.8rem;
