@@ -1,10 +1,16 @@
 const imagemin = require("imagemin");
-const webp = require("imagemin-webp");
+const imageminWebp = require("imagemin-webp");
+const imageminJpegtran = require("imagemin-jpegtran");
 
-imagemin(["img/*.jpg"], "./img", {
-  use: [
-    webp()
-  ]
-}).then(function() {
-  console.log("Images converted!");
-});
+(async () => {
+    const webp = imagemin(["C:/GD/Documenten/Victoria/Vicjuwelen site/img/woman2/png/*.{png}"], {
+        destination: "./img/woman2/webp",
+        plugins: [imageminWebp({ quality: 80, method: 6 })]
+    });
+    const jpg = imagemin(["C:/GD/Documenten/Victoria/Vicjuwelen site/img/woman2/jpg/*.{jpg}"], {
+        destination: "./img/woman2/jpg",
+        plugins: [imageminJpegtran({ progressive: true })]
+    });
+
+    await Promise.all([webp, jpg]);
+})();
