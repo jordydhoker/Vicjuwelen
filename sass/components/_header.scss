@@ -21,30 +21,35 @@
             height: size(9);
             padding: 0 size(4);
             color: black;
-            transition: color 200ms;
+            transition: color $animation-time, background-color $animation-time;
             position: relative;
             text-decoration: none;
+            background-color: white;
             &:after {
                 height: 0px;
-                transition: height 200ms;
+                transition: height $animation-time, background-color $animation-time;
                 display: block;
                 content: "";
-                background-color: $green-500;
-                width: 100%;
+                background-color: $primary-700;
+                width: calc(100% - 4px);
                 position: absolute;
                 bottom: 0;
-                left: 0;
+                left: 2px;
             }
             &--active {
                 @extend .header__nav__a;
+                color: $primary-700;
             }
             &--active,
             &:hover {
-                transition: color 200ms;
-                color: $green-500;
                 &:after {
-                    transition: height 200ms;
                     height: 2px;
+                }
+            }
+            &:hover {
+                color: $primary-900;
+                &:after{
+                    background-color: $primary-900;
                 }
             }
         }

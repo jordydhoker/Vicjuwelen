@@ -60,23 +60,25 @@ html {
   }
 }
 
-.home__consulente {
+.home__consulente, .home__gastvrouw {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-bottom: 24px;
 }
 
-.home__consulente .home__img {
+.home__consulente .home__img, .home__gastvrouw .home__img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
   position: absolute;
   z-index: -2;
+  overflow: hidden;
 }
 
-.home__consulente .home__text {
-  width: 768px;
+.home__consulente .home__text, .home__gastvrouw .home__text {
+  width: 672px;
   background-color: rgba(255, 255, 255, 0.7);
   -ms-flex-item-align: center;
       align-self: center;
@@ -87,17 +89,19 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
-.home__consulente .home__text__title {
-  color: #b69d96;
-  font-size: 3rem;
+.home__consulente .home__text__title, .home__gastvrouw .home__text__title {
+  color: #be7479;
+  font-size: 2.5rem;
   font-weight: 300;
   margin-bottom: 48px;
 }
 
-.home__consulente .home__text__p {
-  font-size: 1.2rem;
+.home__consulente .home__text__p, .home__gastvrouw .home__text__p {
+  font-size: 1.1rem;
   margin-bottom: 48px;
 }
 
@@ -111,11 +115,11 @@ html {
   .home__consulente .home__text__title {
     font-size: 1.8rem;
     font-weight: 300;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
   .home__consulente .home__text__p {
     font-size: 1rem;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
   .home__consulente .home__text a {
     font-size: 1rem;
@@ -128,6 +132,14 @@ html {
 .home__consulente .home__text {
   margin-left: auto;
   padding: 24px var(--side-margin) 24px 24px;
+}
+
+.home__gastvrouw .home__text {
+  padding: 24px 24px 24px var(--side-margin);
+}
+
+.home__gastvrouw .home__img {
+  right: 0;
 }
 
 .fade, .fade--top {
@@ -157,8 +169,8 @@ html {
 }
 
 .button--white {
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
   font-weight: 700;
   padding: 16px 24px;
   -ms-flex-item-align: end;
@@ -228,35 +240,40 @@ html {
   height: 64px;
   padding: 0 16px;
   color: black;
-  -webkit-transition: color 200ms;
-  transition: color 200ms;
+  -webkit-transition: color 200ms, background-color 200ms;
+  transition: color 200ms, background-color 200ms;
   position: relative;
   text-decoration: none;
+  background-color: white;
 }
 
 .header__nav__a:after, .header__nav__a--active:after {
   height: 0px;
-  -webkit-transition: height 200ms;
-  transition: height 200ms;
+  -webkit-transition: height 200ms, background-color 200ms;
+  transition: height 200ms, background-color 200ms;
   display: block;
   content: "";
-  background-color: #b69d96;
-  width: 100%;
+  background-color: #ad5258;
+  width: calc(100% - 4px);
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 2px;
 }
 
-.header__nav__a--active, .header__nav__a:hover, .header__nav__a--active:hover {
-  -webkit-transition: color 200ms;
-  transition: color 200ms;
-  color: #b69d96;
+.header__nav__a--active {
+  color: #ad5258;
 }
 
 .header__nav__a--active:after, .header__nav__a:hover:after, .header__nav__a--active:hover:after {
-  -webkit-transition: height 200ms;
-  transition: height 200ms;
   height: 2px;
+}
+
+.header__nav__a:hover, .header__nav__a--active:hover {
+  color: #8b4146;
+}
+
+.header__nav__a:hover:after, .header__nav__a--active:hover:after {
+  background-color: #8b4146;
 }
 
 .banner {
@@ -275,6 +292,7 @@ html {
   z-index: -2;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 
 .banner__logo {
@@ -291,7 +309,7 @@ html {
   width: 10em;
 }
 
-.home__consulente {
+.home__consulente, .home__gastvrouw {
   width: 100%;
   height: 90vh;
 }

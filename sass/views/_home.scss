@@ -2,30 +2,33 @@
     @extend %fullscreen;
     display: flex;
     position: relative;
+    margin-bottom: size(5);
     .home {
         &__img {
             object-fit: cover;
             height: 100%;
             position: absolute;
             z-index: -2;
+            overflow: hidden;
         }
 
         &__text {
-            width: size(22);
+            width: size(21);
             background-color: $white-300;
             align-self: center;
             display: flex;
             flex-direction: column;
+            box-sizing: content-box;
 
             &__title {
-                color: $green-500;
-                font-size: 3rem;
+                color: $primary-500;
+                font-size: 2.5rem;
                 font-weight: 300;
                 margin-bottom: size(8);
             }
 
             &__p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 margin-bottom: size(8);
             }
         }
@@ -42,11 +45,11 @@
                 &__title {
                     font-size: 1.8rem;
                     font-weight: 300;
-                    margin-bottom: size(8);
+                    margin-bottom: size(5);
                 }
                 &__p {
                     font-size: 1rem;
-                    margin-bottom: size(8);
+                    margin-bottom: size(5);
                 }
                 a {
                     font-size: 1rem;
@@ -72,6 +75,17 @@
             &__text {
                 margin-left: auto;
                 padding: size(5) var(--side-margin) size(5) size(5);
+            }
+        }
+    }
+    &__gastvrouw {
+        @extend %home;
+        .home {
+            &__text {
+                padding: size(5) size(5) size(5) var(--side-margin);
+            }
+            &__img{
+                right: 0;
             }
         }
     }
