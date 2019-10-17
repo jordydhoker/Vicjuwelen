@@ -106,22 +106,22 @@ html {
 }
 
 @media only screen and (max-width: 1200px) {
-  .home__consulente .home__text {
+  .home__consulente .home__text, .home__gastvrouw .home__text {
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin-bottom: 24px;
     width: 672px;
   }
-  .home__consulente .home__text__title {
+  .home__consulente .home__text__title, .home__gastvrouw .home__text__title {
     font-size: 1.8rem;
     font-weight: 300;
     margin-bottom: 24px;
   }
-  .home__consulente .home__text__p {
+  .home__consulente .home__text__p, .home__gastvrouw .home__text__p {
     font-size: 1rem;
     margin-bottom: 24px;
   }
-  .home__consulente .home__text a {
+  .home__consulente .home__text a, .home__gastvrouw .home__text a {
     font-size: 1rem;
     line-height: 1rem;
     font-weight: 700;

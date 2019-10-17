@@ -65,6 +65,9 @@
         &__consulente {
             @extend %home-1200;
         }
+        &__gastvrouw {
+            @extend %home-1200;
+        }
     }
 }
 
@@ -84,7 +87,7 @@
             &__text {
                 padding: size(5) size(5) size(5) var(--side-margin);
             }
-            &__img{
+            &__img {
                 right: 0;
             }
         }
