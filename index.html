@@ -150,9 +150,9 @@
                     />
                 </picture>
                 <div class="home__text">
-                    <h2 class="home__text__title">Consulente Worden?</h2>
+                    <h2 class="h2">Consulente Worden?</h2>
 
-                    <p class="home__text__p">
+                    <p class="p">
                         Wanneer je start als Victoria-consulente is geen investering nodig.<br />
                         <br />
                         Catalogi, uitnodigingen... en zeer belangrijk, de collectie Victoria juwelen
@@ -172,9 +172,9 @@
             <div class="home__gastvrouw">
                 <div class="fade--top fade--small"></div>
                 <div class="home__text">
-                    <h2 class="home__text__title">Gastvrouw Worden?</h2>
+                    <h2 class="h2">Gastvrouw Worden?</h2>
 
-                    <p class="home__text__p">
+                    <p class="p">
                         Wanneer je start als Victoria-consulente is geen investering nodig.<br />
                         <br />
                         Catalogi, uitnodigingen... en zeer belangrijk, de collectie Victoria juwelen
@@ -229,25 +229,30 @@
                 <div class="fade"></div>
             </div>
             <div class="contact">
-                <form netlify method="post">
-                    <label for="subject">Onderwerp</label>
+                <form class="form" netlify netlify-honeypot="honey" method="post" name="Contact">
+                    <h2 class="h2">Contact</h2>
+                    <p class="p">Is je interesse aangewakkerd? Laat dan zeker iets weten!</p>
+
+                    <input type="text" name="honey" style="display:none" />
+
+                    <label class="label" for="subject">Onderwerp</label>
                     <select class="input" id="subject" name="onderwerp" required>
-                        <option disabled selected>Kies een onderwerp</option>
-                        <option>Gastvrouw worden</option>
-                        <option>Consulente worden</option>
-                        <option>Extra Info</option>
+                        <option value="" disabled selected>Kies een onderwerp</option>
+                        <option value="gastvrouw">Gastvrouw worden</option>
+                        <option value="consulente">Consulente worden</option>
+                        <option value="info">Extra Info</option>
                     </select>
 
-                    <label for="email-address">E-mailadres</label>
+                    <label class="label" for="email-address">E-mailadres</label>
                     <input
                         class="input"
-                        type="text"
+                        type="email"
                         id="email-address"
                         name="e-mailadres"
                         required
                     />
 
-                    <label for="phone-number">Telefoon nummer</label>
+                    <label class="label" for="phone-number">Telefoon nummer</label>
                     <input
                         class="input"
                         type="text"
@@ -256,7 +261,7 @@
                         required
                     />
 
-                    <label for="body">Inhoud</label>
+                    <label class="label" for="body">Inhoud</label>
                     <textarea class="input" id="body" name="inhoud" required></textarea>
 
                     <input type="submit" value="Verzenden" class="button--white" />

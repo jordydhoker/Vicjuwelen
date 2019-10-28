@@ -26,3 +26,18 @@
         }
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    %button-1200 {
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 700;
+        padding: size(3) size(4);
+    }
+
+    .button {
+        &--white {
+            @extend %button-1200;
+        }
+    }
+}

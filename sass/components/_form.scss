@@ -1,0 +1,34 @@
+.form {
+    width: size(22);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    padding-bottom: size(3);
+    font-weight: 700;
+}
+.input {
+    margin-bottom: size(5);
+    padding: size(3);
+    border: 1px solid black;
+    background-color: white;
+    transition: background-color $animation-time;
+    font: inherit;
+
+    &:hover {
+        background-color: $gray-100;
+    }
+    &:focus {
+        background-color: $gray-200;
+    }
+}
+select {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+    max-height: size(20);
+    min-height: size(13);
+}

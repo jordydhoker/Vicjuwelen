@@ -5,41 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: size(5) var(--side-margin);
-    form {
-        width: size(22);
-        display: flex;
-        flex-direction: column;
-    }
-    label {
-        padding-bottom: size(3);
-    }
-    .input {
+    padding: size(9) var(--side-margin);
+    .h2 {
         margin-bottom: size(5);
-        padding: size(3);
-        border: 1px solid black;
-        background-color: white;
-        transition: background-color $animation-time;
-        font: inherit;
-
-        &::content {
-            font: inherit;
-        }
-
-        &:hover {
-            background-color: $gray-100;
-        }
-        &:focus {
-            background-color: $gray-200;
-        }
-    }
-    select {
-        cursor: pointer;
-    }
-
-    textarea {
-        resize: vertical;
-        max-height: size(20);
-        min-height: size(13);
     }
 }

@@ -1,6 +1,8 @@
-@import "reset";
-@import "variables";
-@import "colors";
+//main
+@import "main/reset";
+@import "main/variables";
+@import "main/colors";
+@import "main/typography";
 
 //views
 @import "views/home";
@@ -11,6 +13,8 @@
 @import "components/header";
 @import "components/banner";
 @import "components/contact";
+@import "components/form";
+@import "components/footer";
 
 %fullscreen {
     width: 100%;
