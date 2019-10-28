@@ -350,8 +350,10 @@ html {
   background-color: white;
   -webkit-transition: background-color 200ms;
   transition: background-color 200ms;
-  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+  font: inherit;
+}
+
+.contact .input::content {
   font: inherit;
 }
 
