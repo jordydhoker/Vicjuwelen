@@ -228,7 +228,46 @@
                 </picture>
                 <div class="fade"></div>
             </div>
-            <div class="contact"></div>
+            <div class="contact">
+                <form
+                    action="mailto:jordydhoker@gmail.com"
+                    method="post"
+                    name="contact"
+                    enctype="text/plain"
+                    netlify
+                >
+                    <label for="subject">Onderwerp</label>
+                    <select class="input" id="subject" name="subject" required>
+                        <option disabled selected>Kies een onderwerp</option>
+                        <option>Gastvrouw worden</option>
+                        <option>Consulente worden</option>
+                        <option>Extra Info</option>
+                    </select>
+
+                    <label for="email-address">E-mailadres</label>
+                    <input
+                        class="input"
+                        type="text"
+                        id="email-address"
+                        name="email-address"
+                        required
+                    />
+
+                    <label for="phone-number">Telefoon nummer</label>
+                    <input
+                        class="input"
+                        type="text"
+                        id="phone-number"
+                        name="phone-number"
+                        required
+                    />
+
+                    <label for="body">Inhoud</label>
+                    <textarea class="input" id="body" name="body" required></textarea>
+
+                    <input type="submit" value="Verzenden" class="button--white" />
+                </form>
+            </div>
             <footer class="footer"></footer>
         </main>
     </body>
