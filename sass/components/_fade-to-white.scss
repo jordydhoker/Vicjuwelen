@@ -9,11 +9,11 @@
 
 .fade {
     @extend %fade;
-    background-image: linear-gradient(transparent, white);
+    background-image: linear-gradient(rgba(255,255,255,0), white);
     bottom: -1px;
     &--top{
         @extend %fade;
-        background-image: linear-gradient(white, transparent);
+        background-image: linear-gradient(white, rgba(255,255,255,0));
         top: -1px;
     }
     &--small{
