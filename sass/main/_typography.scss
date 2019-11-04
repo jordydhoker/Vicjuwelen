@@ -5,8 +5,16 @@
     margin-bottom: size(8);
 }
 
+.h3 {
+    color: $primary-500;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: size(4);
+}
+
 .p {
     font-size: 1.1rem;
+    line-height: 1.5;
     margin-bottom: size(8);
 }
 
@@ -14,6 +22,12 @@
     .h2 {
         font-size: 1.8rem;
         margin-bottom: size(5);
+    }
+    .h3 {
+        color: $primary-500;
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: size(3);
     }
     .p {
         font-size: 1rem;

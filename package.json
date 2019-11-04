@@ -1,0 +1,30 @@
+{
+  "name": "vicjuwelen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-webp": "^5.1.0",
+    "imagemin": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordydhoker/vicjuwelen.git"
+  },
+  "author": "jordydhoker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordydhoker/vicjuwelen/issues"
+  },
+  "homepage": "https://github.com/jordydhoker/vicjuwelen#readme"
+}
